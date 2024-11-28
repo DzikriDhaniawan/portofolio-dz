@@ -6,6 +6,9 @@
     <title>Portofolio Saya</title>
     <link rel="stylesheet" href="main.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <header>
@@ -15,11 +18,13 @@
                 <li><a href="#experience">Pengalaman</a></li>
                 <li><a href="#skills">Keterampilan</a></li>
                 <li><a href="#contact">Kontak</a></li>
+                <a href="CV.pdf" class="btn-download" download>Download CV</a>
+
             </ul>
         </nav>
         <h1>Muhammad Dzikri Dhaniawan</h1>
+        <img src="asset/profil.png" alt="Foto Profil" class="profile-image">
         <p>Information Technology Enthusiast</p>
-        <a href="CV.pdf" class="btn-download" download>Download CV</a>
     </header>
 
     <section id="about">
@@ -86,60 +91,47 @@
     </section>
 
     <section id="skills">
-        <h2>Bahasa yang di Pelajari</h2>
-        <div class="skills-container">
-            <div class="skill">
-                <img src="asset/c.png" alt="HTML">
-                <p>C</p>
+        <h2>Bahasa yang Dipelajari</h2>
+        <div class="skills-slideshow-container">
+            <!-- Slide 1 -->
+            <div class="skills-slide">
+                <div class="skill"><img src="asset/c.png" alt="C"><p>C</p></div>
+                <div class="skill"><img src="asset/css (2).png" alt="C++"><p>C++</p></div>
+                <div class="skill"><img src="asset/html.png" alt="HTML"><p>HTML</p></div>
+                <div class="skill"><img src="asset/css.png" alt="CSS"><p>CSS</p></div>
+                <div class="skill"><img src="asset/javascript.png" alt="JavaScript"><p>JavaScript</p></div>
             </div>
-            <div class="skill">
-                <img src="asset/css (2).png" alt="CSS">
-                <p>C++</p>
+            <!-- Slide 2 -->
+            <div class="skills-slide">
+                <div class="skill"><img src="asset/java.png" alt="Java"><p>Java</p></div>
+                <div class="skill"><img src="asset/mysql.png" alt="MySQL"><p>MySQL</p></div>
+                <div class="skill"><img src="asset/php.png" alt="PHP"><p>PHP</p></div>
+                <div class="skill"><img src="asset/python.png" alt="Python"><p>Python</p></div>
+                <div class="skill"><img src="asset/ruby.png" alt="Ruby"><p>Ruby</p></div>
             </div>
-            <div class="skill">
-                <img src="asset/html.png" alt="Tailwind CSS">
-                <p>HTML</p>
-            </div>
-            <div class="skill">
-                <img src="asset/css.png" alt="NextJS">
-                <p>CSS</p>
-            </div>
-            <div class="skill">
-                <img src="asset/javascript.png" alt="JavaScript">
-                <p>JavaScript</p>
-            </div>
-            <div class="skill">
-                <img src="asset/java.png" alt="NodeJS">
-                <p>Java</p>
-            </div>
-            <div class="skill">
-                <img src="asset/mysql.png" alt="MySQL">
-                <p>MySQL</p>
-            </div>
-            <div class="skill">
-                <img src="asset/php.png" alt="MongoDB">
-                <p>PHP</p>
-                </div>
-                <div class="skill">
-                    <img src="asset/python.png" alt="MongoDB">
-                    <p>Python</p>
-                </div>
         </div>
     </section>
-
+    
     <section id="contact">
         <h2>Contact Me</h2>
         <p>Anda dapat menghubungi saya melalui:</p>
-        <ul>
-            <li>Email: <a href="dhaniawan.dzikri@gmail.com">Email</a></li>
-            <li>LinkedIn: <a href="https://www.linkedin.com/in/dzikri-dhaniawan-189207333/" target="_blank">Linkedin</a></li>
-            <li>GitHub: <a href="https://github.com/DzikriDhaniawan" target="_blank">Github</a></li>
+        <ul class="contactme">
+            <li><i class="fas fa-envelope"></i> dhanianwan.dzikri@gmail.com</li>
+            <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/dzikri-dhaniawan-189207333/" target="_blank">LinkedIn</a></li>
+            <li><i class="fab fa-github"></i> <a href="https://github.com/DzikriDhaniawan" target="_blank">GitHub</a></li>
         </ul>
     </section>
 
     <footer>
-        <p>© 2024 Dzikri Dhaniawan. Semua hak dilindungi.</p>
-        <a href="#top" class="scroll-to-top">Kembali ke Atas</a>
+        <div class="footer-content">
+            <p>© 2024 Dzikri Dhaniawan. Semua hak dilindungi.</p>
+            <ul class="social-icons">
+                <li><a href="https://www.linkedin.com/in/dzikri-dhaniawan-189207333/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="https://github.com/DzikriDhaniawan" target="_blank"><i class="fab fa-github"></i></a></li>
+                <li><a href="mailto:dhanianwan.dzikri@gmail.com"><i class="fas fa-envelope"></i></a></li>
+            </ul>
+            <a href="#top" class="scroll-to-top">Kembali ke Atas</a>
+        </div>
     </footer>
 
     <script src="main.js"></script>
@@ -155,6 +147,24 @@
                 }
             });
         });
+
+        window.onscroll = function() {
+        const scrollToTopButton = document.querySelector('.scroll-to-top');
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            scrollToTopButton.style.display = "block"; // Tampilkan tombol
+        } else {
+            scrollToTopButton.style.display = "none"; // Sembunyikan tombol
+        }
+    };
+
+    // Menambahkan animasi scroll ke atas
+    document.querySelector('.scroll-to-top').addEventListener('click', function(event) {
+        event.preventDefault(); // Mencegah perilaku default anchor
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth' // Animasi halus
+        });
+    });
     </script>
 </body>
 </html>
