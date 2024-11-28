@@ -1,99 +1,81 @@
 <!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio Saya</title>
-    <link rel="stylesheet" href="main.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portofolio by Dzikri</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
 
-</head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#about">Tentang Saya</a></li>
-                <li><a href="#experience">Pengalaman</a></li>
-                <li><a href="#skills">Keterampilan</a></li>
-                <li><a href="#contact">Kontak</a></li>
-                <a href="CV.pdf" class="btn-download" download>Download CV</a>
 
-            </ul>
-        </nav>
-        <h1>Muhammad Dzikri Dhaniawan</h1>
-        <img src="asset/profil.png" alt="Foto Profil" class="profile-image">
-        <p>Information Technology Enthusiast</p>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />  
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+
+  <body>
+
+    <header class="header">
+      <a href="#" class="logo">Portfolio</a>
+
+      <nav class="navbar">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About Me</a>
+        <a href="#skills">Skill  </a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="bx bx-moon" id="darkMode-icon"></div>
+
+      <div class="bx bx-menu" id="menu-icon"></div>
     </header>
 
-    <section id="about">
-        <h2>Tentang Saya</h2>
-        <p>Seorang Mahasiswa yang sedang menempuh pendidikan di Universitas Udayana. Sedang tertarik pada dunia Information Technology. Mengambil job sampingan sebagai Visual Jockey, Audio Engineer, dan Web Developer.</p>
+
+    <section class="home" id="home">
+      <div class="home-content">
+        <h3>Hello, I am</h3>
+        <h1>Muhammad Dzikri Dhaniawan</h1>
+        <p>I'm a Information Technology Enthusiast</p>
+
+
+        <a href="asset/CV.pdf" class="btn" target="_blank" rel="noopener noreferrer">Download CV</a>
+      </div>
+      <div class="profession-container">
+        <div class="overlay"></div>
+      </div>
     </section>
 
-    <section id="experience">
-        <h2>Pengalaman</h2>
-        <div class="slideshow-container">
-            <div class="mySlides fade">
-                <img src="asset/pict1.jpeg" alt="Pengalaman 1" class="experience-image">
-                <h3>Event Dinner Qimen In Paradise</h3>
-                <p></p>
-            </div>
-            <div class="mySlides fade">
-                <img src="asset/pict2.jpeg" alt="Pengalaman 2" class="experience-image">
-                <h3>Event Organizer Dalam Acara Kunjungan Kerja Reses Komisi XI DPR RI</h3>
-                <p></p>
-            </div>
-            <div class="mySlides fade">
-                <img src="asset/pict3.jpeg" alt="Pengalaman 3" class="experience-image">
-                <h3>Visual Jockey dan Streaming Dalam Event World Water Forum 2024</h3>
-                <p></p>
-            </div>
-            <div class="mySlides fade">
-                <img src="asset/kosmapus.png" alt="Pengalaman 4" class="experience-image">
-                <h3>Project Membuat Website Kosmapus</h3>
-                <p></p>
-            </div>
-            <div class="mySlides fade">
-                <img src="asset/pict4.jpeg" alt="Pengalaman 5" class="experience-image">
-                <h3>Event Contractor Dalam Event APAO 2024</h3>
-                <p></p>
-            </div>
-            <div class="mySlides fade">
-                <img src="asset/pict5.jpeg" alt="Pengalaman 5" class="experience-image">
-                <h3>Visual Jockey Dalam Event Otoritas Jasa Keuangan</h3>
-                <p></p>
-            </div>
-            <div class="mySlides fade">
-                <img src="asset/pict6.jpeg" alt="Pengalaman 5" class="experience-image">
-                <h3>Visual Jockey dan Streaming Dalam Acara UWRF 2024</h3>
-                <p></p>
-            </div>
-            <div class="mySlides fade">
-                <img src="asset/pict11.png" alt="Pengalaman 5" class="experience-image">
-                <h3>Event Contractor Dalam Acara Nasional University Conference</h3>
-                <p></p>
-            </div>
+    <section class="about" id="about">
+      <div class="about-img">
+        <img src="images/about.png" alt="" />
+      </div>
 
-        </div>
-        <div class="dot-container">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-            <span class="dot" onclick="currentSlide(4)"></span>
-            <span class="dot" onclick="currentSlide(5)"></span>
-            <span class="dot" onclick="currentSlide(6)"></span>
-            <span class="dot" onclick="currentSlide(7)"></span>
-            <span class="dot" onclick="currentSlide(8)"></span>
-
-        </div>
+      <div class="about-content">
+        <h2 class="heading">About <span>Me</span></h2>
+        <h3>
+          Hi there, welcome to my website! I'm Dzikri, a passionate web developer
+          who enjoys learning new technologies and currently in learning stage!
+        </h3>
+        <p>
+          This website is my personal blog where I show my project about 
+          web development that i have working on it since last year, using
+          some various technology such as ReactJS.
+        </p>
+        <p>Thank you for visiting my website.</p>
+      </div>
     </section>
+
 
     <section id="skills">
         <h2>Bahasa yang Dipelajari</h2>
-        <div class="skills-slideshow-container">
-            <!-- Slide 1 -->
+        <div class="skills-container">
             <div class="skills-slide">
                 <div class="skill"><img src="asset/c.png" alt="C"><p>C</p></div>
                 <div class="skill"><img src="asset/css (2).png" alt="C++"><p>C++</p></div>
@@ -101,70 +83,129 @@
                 <div class="skill"><img src="asset/css.png" alt="CSS"><p>CSS</p></div>
                 <div class="skill"><img src="asset/javascript.png" alt="JavaScript"><p>JavaScript</p></div>
             </div>
-            <!-- Slide 2 -->
             <div class="skills-slide">
                 <div class="skill"><img src="asset/java.png" alt="Java"><p>Java</p></div>
                 <div class="skill"><img src="asset/mysql.png" alt="MySQL"><p>MySQL</p></div>
                 <div class="skill"><img src="asset/php.png" alt="PHP"><p>PHP</p></div>
                 <div class="skill"><img src="asset/python.png" alt="Python"><p>Python</p></div>
-                <div class="skill"><img src="asset/ruby.png" alt="Ruby"><p>Ruby</p></div>
             </div>
         </div>
-    </section>
-    
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Anda dapat menghubungi saya melalui:</p>
-        <ul class="contactme">
-            <li><i class="fas fa-envelope"></i> dhanianwan.dzikri@gmail.com</li>
-            <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/dzikri-dhaniawan-189207333/" target="_blank">LinkedIn</a></li>
-            <li><i class="fab fa-github"></i> <a href="https://github.com/DzikriDhaniawan" target="_blank">GitHub</a></li>
-        </ul>
-    </section>
+        <span></span>
+        <h2>Skill yang Dikuasai</h2>
+        <div class="skills-slide">
+          <div class="skill"><img src="asset/vmixxx.png" alt="Java"><p>Visual Jockey</p></div>
+          <div class="skill"><img src="asset/audio.png" alt="MySQL"><p>Audio Engineer</p></div>
+          <div class="skill"><img src="asset/videostreaming.png" alt="PHP"><p>Video Streaming</p></div>
+          <div class="skill"><img src="asset/zoom.png" alt="Python"><p>Zoom Streaming</p></div>
+          <div class="skill"><img src="asset/camera.png" alt="Python"><p>Videography</p></div>
+          <div class="skill"><img src="asset/premierpro.png" alt="Python"><p>Video Editor</p></div>
+          <div class="skill"><img src="asset/webdeveloper.png" alt="Python"><p>Web Developer</p></div>
+      </div>
+</section>
 
-    <footer>
-        <div class="footer-content">
-            <p>© 2024 Dzikri Dhaniawan. Semua hak dilindungi.</p>
-            <ul class="social-icons">
-                <li><a href="https://www.linkedin.com/in/dzikri-dhaniawan-189207333/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-                <li><a href="https://github.com/DzikriDhaniawan" target="_blank"><i class="fab fa-github"></i></a></li>
-                <li><a href="mailto:dhanianwan.dzikri@gmail.com"><i class="fas fa-envelope"></i></a></li>
-            </ul>
-            <a href="#top" class="scroll-to-top">Kembali ke Atas</a>
-        </div>
+    <section id="experience" class="experience">
+      <h2>Pengalaman</h2>
+      <div class="slideshow-container">
+          <div class="mySlides fade">
+              <img src="asset/pict1.jpeg" alt="Pengalaman 1" class="experience-image">
+              <h3>Event Dinner Qimen In Paradise</h3>
+              <p>Deskripsi singkat tentang pengalaman ini.</p>
+          </div>
+          <div class="mySlides fade">
+              <img src="asset/pict2.jpeg" alt="Pengalaman 2" class="experience-image">
+              <h3>Event Organizer Dalam Acara Kunjungan Kerja Reses Komisi XI DPR RI</h3>
+              <p>Deskripsi singkat tentang pengalaman ini.</p>
+          </div>
+          <div class="mySlides fade">
+              <img src="asset/pict3.jpeg" alt="Pengalaman 3" class="experience-image">
+              <h3>Visual Jockey dan Streaming Dalam Event World Water Forum 2024</h3>
+              <p>Deskripsi singkat tentang pengalaman ini.</p>
+          </div>
+          <div class="mySlides fade">
+              <img src="asset/kosmapus.png" alt="Pengalaman 4" class="experience-image">
+              <h3>Project Membuat Website Kosmapus</h3>
+              <p>Deskripsi singkat tentang pengalaman ini.</p>
+          </div>
+          <div class="mySlides fade">
+              <img src="asset/pict4.jpeg" alt="Pengalaman 5" class="experience-image">
+              <h3>Event Contractor Dalam Event APAO 2024</h3>
+              <p>Deskripsi singkat tentang pengalaman ini.</p>
+          </div>
+          <div class="mySlides fade">
+              <img src="asset/pict5.jpeg" alt="Pengalaman 6" class="experience-image">
+              <h3>Visual Jockey Dalam Event Otoritas Jasa Keuangan</h3>
+              <p>Deskripsi singkat tentang pengalaman ini.</p>
+          </div>
+          <div class="mySlides fade">
+              <img src="asset/pict6.jpeg" alt="Pengalaman 7" class="experience-image">
+              <h3>Visual Jockey dan Streaming Dalam Acara UWRF 2024</h3>
+              <p>Deskripsi singkat tentang pengalaman ini.</p>
+          </div>
+          <div class="mySlides fade">
+              <img src="asset/pict11.png" alt="Pengalaman 8" class="experience-image">
+              <h3>Event Contractor Dalam Acara Nasional University Conference</h3>
+              <p>Deskripsi singkat tentang pengalaman ini.</p>
+          </div>
+          <div class="mySlides fade">
+              <img src="asset/pict11.png" alt="Pengalaman 9" class="experience-image">
+              <h3>Event Organizer Dalam Acara G20 (Group Of Twenty) di BNDCC Nusa Dua</h3>
+              <p>Deskripsi singkat tentang pengalaman ini.</p>
+          </div>
+      </div>
+      <div class="dot-container">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+          <span class="dot" onclick="currentSlide(5)"></span>
+          <span class="dot" onclick="currentSlide(6)"></span>
+          <span class="dot" onclick="currentSlide(7)"></span>
+          <span class="dot" onclick="currentSlide(8)"></span>
+          <span class="dot" onclick="currentSlide(9)"></span>
+      </div>
+  </section>
+
+<section class="contact" id="contact">
+    <h2 class="heading">Contact <span>Me!</span></h2>
+
+    <div class="social-media">
+        <a href="https://www.instagram.com/dhaniawannn/" target="_blank" rel="noopener noreferrer">
+            <i class="bx bxl-instagram-alt"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/dzikri-dhaniawan-189207333/" target="_blank" rel="noopener noreferrer">
+            <i class="bx bxl-linkedin"></i>
+        </a>
+        <a href="https://github.com/DzikriDhaniawan" target="_blank" rel="noopener noreferrer">
+            <i class="bx bxl-github"></i>
+        </a>
+        <a href="#" target="_blank" rel="noopener noreferrer">
+            <i class="bx bxl-gmail"></i>
+        </a>
+        <a href="#" target="_blank" rel="noopener noreferrer">
+            <i class="bx bxl-whatsapp"></i>
+        </a>
+ 
+    </div>
+</section>
+
+
+    <footer class="footer">
+      <div class="footer-text">
+        <p>Copyright &copy; 2024 | All Rights Reserved.</p>
+      </div>
+
+      <div class="footer-iconTop">
+        <a href="#home"><i class="bx bx-up-arrow-alt"></i></a>
+      </div>
     </footer>
 
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="main.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('a[href^="#"]').on('click', function(event) {
-                var target = $(this.getAttribute('href'));
-                if (target.length) {
-                    event.preventDefault();
-                    $('html, body').stop().animate({
-                        scrollTop: target.offset().top
-                    }, 500);
-                }
-            });
-        });
-
-        window.onscroll = function() {
-        const scrollToTopButton = document.querySelector('.scroll-to-top');
-        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-            scrollToTopButton.style.display = "block"; // Tampilkan tombol
-        } else {
-            scrollToTopButton.style.display = "none"; // Sembunyikan tombol
-        }
-    };
-
-    // Menambahkan animasi scroll ke atas
-    document.querySelector('.scroll-to-top').addEventListener('click', function(event) {
-        event.preventDefault(); // Mencegah perilaku default anchor
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth' // Animasi halus
-        });
-    });
-    </script>
-</body>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  </body>
 </html>
