@@ -17,7 +17,9 @@
   --main-color: #d1691fcb;
   --white-color: #ffffff;
   --shadow-color: rgba(0, 0, 0, 0.2);
-  --text-color-ops:var(--text-color)
+  --text-color-ops:var(--text-color);
+  --second-color: #3A6D8C;
+  --third-color : #BCF2F6;
 }
 
 *::selection {
@@ -62,7 +64,7 @@ body {
 
 .logo {
   font-size: 2.5rem;
-  color: var(--main-color);
+  color: var(--text-color);
   font-weight: 600;
   margin-right: auto;
 }
@@ -105,7 +107,7 @@ body {
 }
 
 .header.sticky #darkMode-icon {
-  color: var(--text-color);
+  color: var(--white-color);
   opacity: 0.9;
 }
 
@@ -121,12 +123,21 @@ section {
 }
 
 .home {
-  display: flex;
-  align-items: center;
+    position: relative; 
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to bottom right, rgba(34, 193, 195, 0.8), rgba(253, 187, 45, 0.8)), url('asset/mainbg.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 .home .home-content {
   max-width: 44rem;
+}
+
+.profile-image{
+    z-index: 1;
 }
 
 .home-content h3 {
@@ -260,9 +271,9 @@ section {
   right: 0;
   width: 0;
   height: 0;
-  border-top: 50vh solid var(--main-color);
-  border-right: 384px solid var(--main-color);
-  border-bottom: 50vh solid var(--main-color);
+  border-top: 50vh solid var(--white-color);
+  border-right: 384px solid var(--third-color);
+  border-bottom: 50vh solid var(--second-color);
   border-left: 384px solid transparent;
 }
 
@@ -553,24 +564,35 @@ span {
 }
 
 .footer-iconTop a {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0.8rem;
-  background: var(--white-color);
-  border-radius: 0.8rem;
-  border: 0.2rem solid var(--main-color);
-  outline: 0.2rem solid transparent;
-  transition: 0.5s ease;
+    position: fixed;
+    bottom: 20px; 
+    right: 20px; 
+    background-color: var(--main-color); 
+    color: var(--white-color);
+    border-radius: 50%; 
+    width: 50px; 
+    height: 50px; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s, transform 0.3s;
+    z-index: 1000;
+    text-decoration: none;
 }
 
 .footer-iconTop a:hover {
-  outline-color: var(--white-color);
+    background-color: #DC5F00;
+    transform: scale(1.1);
 }
 
 .footer-iconTop a i {
-  font-size: 2.4rem;
-  color: #333;
+    font-size: 2rem;
+    transition: transform 0.3s;
+}
+
+.footer-iconTop a i:hover {
+    transform: rotate(180deg);
 }
 
 /* BREAKPOINTS */
@@ -731,8 +753,8 @@ span {
   }
 
   .home {
-    padding: 5rem 3%; /* Sesuaikan padding untuk tampilan lebih baik */
-    justify-content: center; /* Pusatkan konten */
+    padding: 5rem 3%;
+    justify-content: center;
     text-align: center;
   }
 
@@ -813,8 +835,8 @@ span {
   }
 
   .about-img img {
-    width: 90%; /* Sesuaikan lebar gambar */
-    max-width: 400px; /* Maksimal lebar gambar */
+    width: 90%;
+    max-width: 400px;
     margin: 0 auto;
   }
 
@@ -827,8 +849,8 @@ span {
   }
 
   .skills-container {
-    flex-direction: column; /* Ubah arah menjadi kolom */
-    align-items: center; /* Pusatkan item */
+    flex-direction: column;
+    align-items: center;
   }
 
   .testimonial-box .swiper-button-next,
@@ -905,14 +927,14 @@ img {
 }
 
 .contact__message {
-  font-size: 1.5rem; /* Adjust the font size as needed */
-  color: green; /* Change the color as needed */
-  font-weight: bold; /* Make the text bold */
-  margin-top: 1rem; /* Add some margin on top */
-  text-align: center; /* Center the text */
+  font-size: 1.5rem; 
+  color: green;
+  font-weight: bold; 
+  margin-top: 1rem; 
+  text-align: center;
 }
 .contact__message.error {
-  color: red; /* Change the color for error messages */
+  color: red; 
 }
 
 #skills {
@@ -921,8 +943,8 @@ img {
 }
 
 #skills h2 {
-    font-size: 4rem; /* Perbesar ukuran font untuk judul */
-    margin-bottom: 2rem; /* Tambahkan margin bawah untuk spasi */
+    font-size: 4rem; 
+    margin-bottom: 2rem; 
 }
 
 .skills-container {
@@ -946,7 +968,7 @@ img {
     border-radius: 10px;
     text-align: center;
     transition: transform 0.3s, background-color 0.3s;
-    width: 120px; /* Ukuran tetap untuk setiap skill */
+    width: 120px; 
 }
 
 .skill:hover {
@@ -955,8 +977,8 @@ img {
 }
 
 .skill img {
-    width: 70px; /* Perbesar ukuran gambar skill */
-    height: 70px; /* Sesuaikan tinggi gambar skill */
+    width: 70px; 
+    height: 70px;
 }
 
 .skill p {
@@ -977,28 +999,39 @@ img {
 
 .social-media {
     display: flex;
-    justify-content: center; /* Memastikan ikon berada di tengah */
+    justify-content: center; /* Pusatkan ikon media sosial */
     gap: 2rem; /* Jarak antara ikon */
+    flex-wrap: wrap; /* Membuat ikon membungkus ke baris berikutnya jika perlu */
 }
 
 .social-media a {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 6rem; /* Atur lebar ikon */
-    height: 6rem; /* Atur tinggi ikon */
-    background: transparent;
-    border: 0.2rem solid var(--main-color);
-    border-radius: 50%;
-    box-shadow: 0 0.2rem 0.5rem var(--shadow-color);
-    font-size: 3rem; /* Perbesar ukuran font untuk ikon */
-    color: var(--main-color);
-    transition: 0.5s ease;
+    display: flex;
+    flex-direction: column; /* Mengubah arah menjadi kolom untuk ikon dan teks */
+    align-items: center; /* Pusatkan item di dalam kolom */
+    text-align: center; /* Pusatkan teks */
+    color: var(--main-color); /* Warna teks sesuai dengan tema */
+    text-decoration: none; /* Menghilangkan garis bawah pada tautan */
+    transition: transform 0.3s, color 0.3s; /* Transisi untuk transformasi dan warna */
+}
+
+.social-media a i {
+    font-size: 5.5rem; /* Ukuran ikon media sosial */
+    transition: transform 0.3s; /* Transisi untuk ikon */
+}
+
+.social-media a:hover i {
+    transform: scale(1.2); /* Membesarkan ikon saat hover */
+}
+
+.social-media a span {
+    margin-top: 0.5rem; /* Memberikan jarak antara ikon dan teks */
+    font-size: 1.4rem; /* Ukuran font untuk teks */
+    transition: color 0.3s; /* Transisi untuk warna teks */
 }
 
 .social-media a:hover {
-    background: var(--main-color);
-    color: var(--white-color);
+    transform: translateY(-5px); /* Mengangkat elemen sedikit saat hover */
+    color: #DC5F00; /* Ubah warna teks saat hover */
 }
 
 .experience {
@@ -1008,12 +1041,12 @@ img {
 }
 
 .experience h2 {
-    font-size: 3rem; /* Perbesar ukuran font untuk judul */
+    font-size: 4rem; /* Perbesar ukuran font untuk judul */
     margin-bottom: 3rem; /* Tambahkan margin bawah untuk spasi */
 }
 
 .experience h3 {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
 
 }
 
